@@ -4,13 +4,14 @@
 
 #include "division.h"
 
-DivisionResult Division::divide() {
-  if (fraction.denominator == 0L) throw DivisionByZero();
+auto Division::divide() const -> DivisionResult {
+    if (fraction.denominator == 0L) {
+        throw DivisionByZero();
+    }
 
-  DivisionResult result = DivisionResult{
-    fraction.numerator / fraction.denominator, 
-    fraction.numerator % fraction.denominator
-  };
+    DivisionResult result =
+        DivisionResult{fraction.numerator / fraction.denominator,
+                       fraction.numerator % fraction.denominator};
 
-  return result;
+    return result;
 }
