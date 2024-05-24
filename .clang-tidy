@@ -1,6 +1,9 @@
 Checks: "-*,modernize-*,clang-analyzer-cplusplus.NewDeleteLeaks,readability-const-return-type,readability-redundant-declaration,readability-redundant-string-init,readability-braces-around-statements,readability-make-member-function-const,readability-implicit-bool-conversion,readability-static-definition-in-anonymous-namespace,readability-make-member-function-const,readability-isolate-declaration,readability-function-size,google-explicit-constructor,google-build-using-namespace,google-readability-namespace-comments"
 WarningsAsErrors: "*"
 
+ExcludePaths:
+  - test/lib/**
+
 CheckOptions:
   - key: performance-move-const-arg.CheckTriviallyCopyableMove
     value: false
