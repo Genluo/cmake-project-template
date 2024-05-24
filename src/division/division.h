@@ -1,5 +1,5 @@
 #pragma once
-#include <stdexcept>
+#include <exception>
 
 static const char* const DIVISION_BY_ZERO_MESSAGE =
     "Division by zero is illegal";
